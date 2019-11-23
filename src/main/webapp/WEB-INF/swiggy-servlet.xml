@@ -1,0 +1,84 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:component-scan
+		base-package="com.calculator.controllers" />
+
+<!-- interceptor theory https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-interceptor-tutorial/ -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/*"/>
+			<mvc:exclude-mapping path="/loginUser"/>
+			<mvc:exclude-mapping path="/goToHomePage"/>
+			<mvc:exclude-mapping path="/logout"/>
+			<mvc:exclude-mapping path="/registerUser"/>
+			<mvc:exclude-mapping path="/testIoc"/>
+			<bean class="com.calculator.interceptors.SessionValidationInterceptor"/>
+		</mvc:interceptor>	
+	</mvc:interceptors>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean class="com.calculator.service.UserService"></bean>
+	<bean class="com.calculator.service.OrderManagementService"></bean>
+
+	<!-- jdbc dao -->
+	<!-- <bean class="com.calculator.dao.jdbc.impl.UserJdbcDaoImpl"></bean> 
+		<bean class="com.calculator.dao.jdbc.impl.OrderManagementJdbcDaoImpl"></bean> -->
+
+	<!-- hibernate dao -->
+	<bean class="com.calculator.dao.impl.UserHibernateDaoImpl"></bean>
+	<bean
+		class="com.calculator.dao.impl.OrderManagementHibernateDaoImpl"></bean>
+		
+	<!-- <bean class="com.calculator.pojo.Student" scope="prototype">
+		<property name="collegeName" value="Aurora"></property>
+		<property name="city" value="Hyderabad"></property>
+		<property name="pport" ref="passportObj"></property>
+		
+		<property name="subjects">
+			<list>
+				<value>Maths</value>
+				<value>Physics</value>
+				<value>Chemistry</value>
+			</list>
+		</property>
+	</bean> -->
+	
+	<bean class="com.calculator.pojo.Student" scope="singleton">
+		<property name="collegeName" value="Aurora"></property>
+		<property name="city" value="Hyderabad"></property>
+		<property name="pport" ref="passportObj"></property>
+	</bean>
+	
+	<bean id="passportObj" class="com.calculator.pojo.Passport" scope="prototype">
+		<property name="country" value="India"></property>
+	</bean>
+	
+	<bean name="aurObj" class="com.calculator.pojo.College">
+		<property name="collegeName" value="Aurora"></property>
+	</bean>
+	
+	<bean name="cbiObj" class="com.calculator.pojo.College">
+		<property name="collegeName" value="CBIT"></property>
+	</bean>
+	
+</beans>
+        
