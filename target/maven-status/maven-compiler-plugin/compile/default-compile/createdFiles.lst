@@ -10,6 +10,7 @@ com\calculator\dao\impl\Dog.class
 com\calculator\pojo\Passport.class
 com\calculator\dao\jdbc\impl\UserJdbcDaoImpl.class
 com\calculator\pojo\User.class
+com\calculator\pojo\Battery.class
 com\calculator\validation\SwiggyValidation.class
 com\calculator\dao\impl\Cat.class
 com\calculator\dao\jdbc\impl\OrderManagementJdbcDaoImpl.class
@@ -19,7 +20,9 @@ com\calculator\interceptors\SessionValidationInterceptor.class
 com\calculator\controllers\Calculator.class
 com\calculator\controllers\TestController.class
 com\calculator\service\OrderManagementService.class
+com\calculator\controllers\TestIoc.class
 com\calculator\dao\impl\UserHibernateDaoImpl.class
 com\calculator\pojo\Student.class
+com\calculator\pojo\Mobile.class
 com\calculator\controllers\Test.class
 com\calculator\pojo\ItemInfo.class

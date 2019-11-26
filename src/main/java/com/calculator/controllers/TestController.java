@@ -13,10 +13,10 @@ import com.calculator.pojo.Student;
 @Controller
 public class TestController {
 
-	@Autowired
+	@Autowired(required = false)
 	private Student s1;
 	
-	@Autowired
+	@Autowired(required = false)
 	Student s2;
 	
 	@Qualifier(value = "aurObj")
@@ -38,7 +38,16 @@ public class TestController {
 	@RequestMapping(value = "/testIoc")
 	public String testIoc() {
 		System.out.println("Triggred testIoc method");
-		
+		if(s1 == null) {
+			System.out.println("s1 is null");
+			s1 = new Student();
+			s1.setPport(new Passport());
+		}
+		if(s2 == null) {
+			System.out.println("s2 is null");
+			s2 = new Student();
+			s2.setPport(new Passport());
+		}
 		System.out.println("-----college-------");
 		c1.setLocation("Ramanthapur");
 		c2.setLocation("Ramanthapur");
@@ -86,7 +95,7 @@ public class TestController {
 		
 		std1.setName("Ravi");
 		std1.setStdId(100);
-		std1.setCity("Hyderabad");
+//		std1.setCity("Hyderabad");
 		std1.setCollegeName("Aurora");
 //		std1.setPport(pp1);
 		

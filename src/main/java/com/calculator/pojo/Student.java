@@ -11,6 +11,26 @@ public class Student {
 	private List<String> subjects;
 	private Passport pport;
 
+	public Student() {
+		System.out.println("no arg constructor of student!!");
+	}
+
+	public Student(String collegeName, String city, Passport pport) {
+		System.out.println("3 arg student constructor!!");
+		this.collegeName = collegeName;
+		this.city = city;
+		this.pport = pport;
+	}
+	
+	public Student(int stdId, String name, String collegeName, String city, Passport pport) {
+		System.out.println("argument constructor of student!!");
+		this.stdId = stdId;
+		this.name = name;
+		this.collegeName = collegeName;
+		this.city = city;
+		this.pport = pport;
+	}
+
 	public int getStdId() {
 		return stdId;
 	}

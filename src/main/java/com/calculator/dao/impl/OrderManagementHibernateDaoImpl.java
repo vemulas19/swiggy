@@ -17,7 +17,7 @@ public class OrderManagementHibernateDaoImpl implements IOrderManagementDao {//A
 	final static Logger logger = Logger.getLogger(OrderManagementHibernateDaoImpl.class);
 	
 	public int deleteItem(int itemId) {
-		logger.info("executing OrderManagementDaoImpl :: deleteItem");
+		logger.info("executing OrderManagementDaoImpl :: deleteIOrderManagementService.javatem");
 		Configuration configure = new Configuration().configure("hibernate.cfg.xml");
 		SessionFactory sf = configure.buildSessionFactory();
 		Session session = sf.openSession();

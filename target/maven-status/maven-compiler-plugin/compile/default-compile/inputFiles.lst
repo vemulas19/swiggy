@@ -2,11 +2,13 @@ C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\imp
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\Passport.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\interf\IUserDao.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\Calculator.java
+C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\TestIoc.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\interceptors\SessionValidationInterceptor.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\Test.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\UserController.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\impl\Dog.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\impl\OrderManagementHibernateDaoImpl.java
+C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\Mobile.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\validation\SwiggyValidation.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\ItemInfo.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\impl\Human.java
@@ -19,6 +21,7 @@ C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\service
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\College.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\service\OrderManagementService.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\OrderManagementController.java
+C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\Battery.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\pojo\Student.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\controllers\TestController.java
 C:\Users\kamalakar\eclipse-workspace\swiggy\src\main\java\com\calculator\dao\impl\IAnimal.java
