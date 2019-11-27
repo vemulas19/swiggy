@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.calculator.pojo.College;
 import com.calculator.pojo.Passport;
+import com.calculator.pojo.Professor;
 import com.calculator.pojo.Student;
 
 @Controller
@@ -35,6 +36,9 @@ public class TestController {
 	@Autowired
 	College c4;
 
+	@Autowired
+	Professor pro1;
+	
 	@RequestMapping(value = "/testIoc")
 	public String testIoc() {
 		System.out.println("Triggred testIoc method");
@@ -48,6 +52,12 @@ public class TestController {
 			s2 = new Student();
 			s2.setPport(new Passport());
 		}
+		System.out.println("--------------professor---------------");
+		pro1.setCollegeName("Aurora");
+		pro1.setExperience(3.5);
+		pro1.setSubject("Computers");
+		System.out.println(pro1.getCollegeName());
+		System.out.println("--------------professor---------------");
 		System.out.println("-----college-------");
 		c1.setLocation("Ramanthapur");
 		c2.setLocation("Ramanthapur");

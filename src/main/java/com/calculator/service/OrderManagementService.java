@@ -11,6 +11,9 @@ import com.calculator.pojo.ItemInfo;
 
 public class OrderManagementService {
 
+	public OrderManagementService() {
+		System.out.println("OrderManagementService Constructor!!");
+	}
 	@Autowired
 	IOrderManagementDao dao;
 

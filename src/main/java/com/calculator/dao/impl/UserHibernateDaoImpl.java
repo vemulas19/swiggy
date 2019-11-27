@@ -15,6 +15,9 @@ import com.calculator.service.UserService;
 
 public class UserHibernateDaoImpl implements IUserDao {//Assume this is Dog
 
+	public UserHibernateDaoImpl() {
+		System.out.println("UsreHibernateDaoImpl constructor!!");
+	}
 	final static Logger logger = Logger.getLogger(UserHibernateDaoImpl.class);
 	
 	public void saveUser(User user) {

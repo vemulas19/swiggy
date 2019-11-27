@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<context:component-scan
-		base-package="com.calculator.controllers" />
+		base-package="com.calculator.controllers,com.calculator.pojo" />
 
 <!-- interceptor theory https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-interceptor-tutorial/ -->
 	<mvc:interceptors>
@@ -36,7 +36,7 @@
 		</property>
 	</bean>
 
-	<bean class="com.calculator.service.UserService"></bean>
+	<bean class="com.calculator.service.UserService" scope="prototype"></bean>
 	<bean class="com.calculator.service.OrderManagementService"></bean>
 
 	<!-- jdbc dao -->
@@ -44,7 +44,7 @@
 		<bean class="com.calculator.dao.jdbc.impl.OrderManagementJdbcDaoImpl"></bean> -->
 
 	<!-- hibernate dao -->
-	<bean class="com.calculator.dao.impl.UserHibernateDaoImpl"></bean>
+	<bean class="com.calculator.dao.impl.UserHibernateDaoImpl" scope="prototype"></bean>
 	<bean
 		class="com.calculator.dao.impl.OrderManagementHibernateDaoImpl"></bean>
 		
@@ -67,12 +67,14 @@
 		<property name="city" value="Hyderabad"></property>
 		<property name="pport" ref="passportObj"></property>
 	</bean> -->
-	<bean id="mobil" class="com.calculator.pojo.Mobile">
+	
+	<!-- <bean id="mobil" class="com.calculator.pojo.Mobile">
 		<constructor-arg ref="bat"></constructor-arg>
 	</bean>
 	<bean id="bat" class="com.calculator.pojo.Battery">
 		<constructor-arg ref="mobil"></constructor-arg>
-	</bean>
+	</bean> -->
+	
 	<bean class="com.calculator.pojo.Student">
 		<constructor-arg value="Aurora"/>
 		<constructor-arg value="Hyderabad"/>

@@ -14,6 +14,7 @@ com\calculator\pojo\Battery.class
 com\calculator\validation\SwiggyValidation.class
 com\calculator\dao\impl\Cat.class
 com\calculator\dao\jdbc\impl\OrderManagementJdbcDaoImpl.class
+com\calculator\pojo\Professor.class
 com\calculator\controllers\OrderManagementController.class
 com\calculator\controllers\BaseController.class
 com\calculator\interceptors\SessionValidationInterceptor.class

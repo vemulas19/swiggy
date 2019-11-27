@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<context:component-scan
-		base-package="com.calculator.controllers" />
+		base-package="com.calculator.controllers,com.calculator.pojo" />
 
 <!-- interceptor theory https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-interceptor-tutorial/ -->
 	<mvc:interceptors>
