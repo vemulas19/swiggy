@@ -19,6 +19,7 @@ public class SessionValidationInterceptor extends HandlerInterceptorAdapter {
 		logger.info("executing SessionValidationInterceptor :: preHandle method!!");
 		HttpSession httpSession = request.getSession();
 		String userName = (String) httpSession.getAttribute("userName");
+		
 		logger.debug("User name in session is :  " + userName);
 		if (userName == null || userName.isEmpty()) {
 			logger.debug("userName not available in session!!");

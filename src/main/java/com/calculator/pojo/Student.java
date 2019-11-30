@@ -15,6 +15,11 @@ public class Student {
 		System.out.println("no arg constructor of student!!");
 	}
 
+	public Student(Passport pport) {
+		System.out.println("Passport constructor arg used!!");
+		this.pport = pport;
+	}
+	
 	public Student(String collegeName, String city, Passport pport) {
 		System.out.println("3 arg student constructor!!");
 		this.collegeName = collegeName;

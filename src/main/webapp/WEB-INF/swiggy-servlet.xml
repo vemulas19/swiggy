@@ -14,7 +14,7 @@
 		base-package="com.calculator.controllers,com.calculator.pojo" />
 
 <!-- interceptor theory https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-interceptor-tutorial/ -->
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/*"/>
 			<mvc:exclude-mapping path="/loginUser"/>
@@ -24,7 +24,7 @@
 			<mvc:exclude-mapping path="/testIoc"/>
 			<bean class="com.calculator.interceptors.SessionValidationInterceptor"/>
 		</mvc:interceptor>	
-	</mvc:interceptors>
+	</mvc:interceptors> -->
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -36,7 +36,7 @@
 		</property>
 	</bean>
 
-	<bean class="com.calculator.service.UserService"></bean>
+	<bean class="com.calculator.service.UserService" scope="prototype" ></bean>
 	<bean class="com.calculator.service.OrderManagementService"></bean>
 
 	<!-- jdbc dao -->
@@ -75,13 +75,21 @@
 		<constructor-arg ref="mobil"></constructor-arg>
 	</bean> -->
 	
-	<bean class="com.calculator.pojo.Student">
+	<!-- <bean class="com.calculator.pojo.Student">
 		<constructor-arg value="Aurora"/>
 		<constructor-arg value="Hyderabad"/>
 		<constructor-arg ref="passportObj"/>
-	</bean>
+	</bean> -->
 	
-	<bean id="passportObj" class="com.calculator.pojo.Passport">
+	<!-- <bean class="com.calculator.pojo.Student" autowire="byType">
+	</bean> -->
+	<!-- <bean class="com.calculator.pojo.Student" autowire="byName">
+	</bean> -->
+	<bean class="com.calculator.pojo.Student" autowire="constructor">
+		<constructor-arg value="Aurora"/>
+		<constructor-arg value="Hyderabad"/>
+	</bean>
+	<bean id="passportObj" name="pport" class="com.calculator.pojo.Passport">
 		<property name="country" value="India"></property>
 	</bean>
 	

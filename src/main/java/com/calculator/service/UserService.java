@@ -54,7 +54,7 @@ public class UserService {
 		return "login";
 	}
 
-	public String loginUser(String userName, String password, Model model, HttpSession httpSession) {
+	public String loginUser(String userName, String password, Model model/* , HttpSession httpSession */) {
 		logger.info("executing UserService :: loginUser!!");
 
 		List<User> list = dao.loginUser(userName, password);
@@ -67,7 +67,7 @@ public class UserService {
 			return "login";
 		}
 		System.out.println("login for " + userName);
-		httpSession.setAttribute("userName", userName); // adding userName to session object
+		/* httpSession.setAttribute("userName", userName); */ // adding userName to session object
 //		httpSession.setMaxInactiveInterval(10);
 		for (User user : list) {
 			logger.debug(user.getName() + "--" + user.getMobile() + "--" + user.getMailId() + "--" + user.getPassword()

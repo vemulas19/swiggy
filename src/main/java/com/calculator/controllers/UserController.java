@@ -36,10 +36,10 @@ public class UserController {
 
 	@RequestMapping(value = "/loginUser", method = RequestMethod.POST)
 	public String loginUser(@RequestParam("userName") String userName, @RequestParam("pwd") String password,
-			Model model, HttpSession httpSession) {
+			Model model/* , HttpSession httpSession */) {
 		logger.info("executing UserController :: loginUser method!!");
 
-		String res = service.loginUser(userName, password, model, httpSession);
+		String res = service.loginUser(userName, password, model/* , httpSession */);
 
 		logger.info("exit UserController :: loginUser!!");
 		return res;

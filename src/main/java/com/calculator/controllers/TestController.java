@@ -14,10 +14,10 @@ import com.calculator.pojo.Student;
 @Controller
 public class TestController {
 
-	@Autowired(required = false)
+	@Autowired /* (required = false) */
 	private Student s1;
 	
-	@Autowired(required = false)
+	@Autowired /* (required = false) */
 	Student s2;
 	
 	@Qualifier(value = "aurObj")
@@ -45,12 +45,12 @@ public class TestController {
 		if(s1 == null) {
 			System.out.println("s1 is null");
 			s1 = new Student();
-			s1.setPport(new Passport());
+//			s1.setPport(new Passport());
 		}
 		if(s2 == null) {
 			System.out.println("s2 is null");
 			s2 = new Student();
-			s2.setPport(new Passport());
+//			s2.setPport(new Passport());
 		}
 		System.out.println("--------------professor---------------");
 		pro1.setCollegeName("Aurora");

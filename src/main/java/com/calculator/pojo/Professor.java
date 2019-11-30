@@ -1,11 +1,15 @@
 package com.calculator.pojo;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
-@Repository
+@Component
+@Scope(value = "prototype")
 public class Professor {
 
+	public Professor() {
+		System.out.println("Professor constructor!!");
+	}
 	private String collegeName;
 	private String subject;
 	private double experience;
