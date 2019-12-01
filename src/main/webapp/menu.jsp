@@ -21,7 +21,7 @@ function deleteItem(id){
 </head>
 <body>
 <font color="red">${msg}</font>
-Click here for <a href="logout">logout</a>
+<a href="<core:url value="/j_spring_security_logout" />" >Logout</a></br>
 <form action="deleteMultiple">
 <table border="1">
 <tr>

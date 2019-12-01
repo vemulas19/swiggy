@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<font color="red">${message}</font>
 <form action="addItemPage">
 Click this button to add new item <input type="submit" value="Add Item"/>
 </form>
